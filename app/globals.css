@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  --gold:    #C9A84C;
+  --gold-2:  #E4C87A;
+  --ink:     #09090B;
+  --surface: #111115;
+  --card:    #18181D;
+  --border:  rgba(255,255,255,0.07);
+  --text:    #F0EFE9;
+  --muted:   #6B7280;
+  --cream:   #FAF8F3;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background: var(--ink);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+/* ── Scrollbar ─────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 9px; }
+
+/* ── Section label (SERVICES / ABOUT …) ── */
+.label {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── Section heading ──────────────────── */
+.display {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+/* ── Hairline divider ─────────────────── */
+.hairline {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+.hairline-gold {
+  border: none;
+  border-top: 1px solid rgba(201,168,76,0.35);
+}
+
+/* ── Gold pill button ─────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: #09090B;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 13px 28px;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.btn-gold:hover { background: var(--gold-2); transform: translateY(-1px); }
+
+/* ── Ghost button ─────────────────────── */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 13px 28px;
+  border-radius: 999px;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
+
+/* ── Hero ─────────────────────────────── */
+.layout-wrapper {
+  min-height: 100vh;
+  background-image: url(/assets/refining-a.jpg);
+  background-size: cover;
+  background-position: center right;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.layout-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    #09090B 38%,
+    rgba(9,9,11,0.78) 58%,
+    rgba(9,9,11,0.25) 100%
+  );
+  z-index: 0;
+}
+
+/* ── Verify page ──────────────────────── */
+.verify-wrapper {
+  height: calc(100vh - 70px);
+  background-image: url(/assets/verify-hero.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.verify-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  gap: 8px;
+  width: min(800px, 98%);
+}
+.logo-image  { height: 72px; width: 100%; }
+.space-left  { margin-right: 2.5rem !important; }
+
+/* ── Autofill ─────────────────────────── */
+input:-webkit-autofill {
+  -webkit-text-fill-color: #e5e7eb !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ── Header container ─────────────────── */
+@media (min-width: 320px) and (max-width: 1279px) {
+  .header-container .container { max-width: 100% !important; padding-left: 1rem; padding-right: 1rem; }
+}
+@media (min-width: 997px) and (max-width: 1161px) {
+  .space-left { margin-right: 1rem !important; }
+}
+
+/* ── Verify responsive ────────────────── */
+@media (min-width: 388px) and (max-width: 394px) {
+  .verify-font   { font-size: 14px !important; }
+  .verify-button { font-size: 14px !important; }
+}
+@media (max-width: 387px) {
+  .verify-font   { font-size: 13px !important; }
+  .verify-button { font-size: 13px !important; padding-left: 10px !important; padding-right: 10px !important; }
+}

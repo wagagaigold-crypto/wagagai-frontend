@@ -1,0 +1,44 @@
+{
+  "name": "wagagai-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "dotenv -c -- next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@types/react-google-recaptcha": "^2.1.9",
+    "axios": "^1.11.0",
+    "dotenv-cli": "^10.0.0",
+    "formik": "^2.4.6",
+    "lucide-react": "^0.544.0",
+    "next": "16.0.10",
+    "pdf-lib": "^1.17.1",
+    "react": "19.1.2",
+    "react-dom": "19.1.2",
+    "react-google-recaptcha": "^3.1.0",
+    "react-qr-code": "^2.0.18",
+    "react-toastify": "^11.0.5",
+    "yup": "^1.7.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.0",
+    "pdf-parse": "^2.4.5",
+    "pdfjs-dist": "^4.0.379",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
