@@ -16,7 +16,7 @@ const Footer = () => {
               className="cursor-pointer mb-5 inline-block"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              <Image src="/wagagai-logo-transparent.png" alt="Wagagai" width={120} height={120} className="h-14 w-auto object-contain" />
+              <Image src="/wagagai-logo-transparent.png" alt="Wagagai" width={120} height={120} className="h-30 w-auto object-contain" />
             </div>
             <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
               A Ugandan precious metal refinery — built on integrity,

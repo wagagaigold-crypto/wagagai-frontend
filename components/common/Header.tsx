@@ -19,7 +19,7 @@ const Header = () => {
             alt="Wagagai Logo"
             width={500}
             height={500}
-            className="h-14 w-auto object-contain"
+            className="h-30 w-auto object-contain"
           />
         </div>
 

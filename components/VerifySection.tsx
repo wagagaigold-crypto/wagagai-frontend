@@ -118,7 +118,7 @@ const VerifySection = () => {
               alt="Wagagai Logo"
               width={500}
               height={500}
-              className={`h-24 w-auto mx-auto mix-blend-screen`}
+              className={`h-50 w-auto mx-auto mix-blend-screen`}
             />
           </div>
 
