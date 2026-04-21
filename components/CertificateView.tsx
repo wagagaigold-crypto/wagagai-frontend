@@ -247,7 +247,7 @@ const CertificateView = ({ handleClose, data }: CertificateModalProps) => {
 
                     <Box sx={{ width: 145 }}>
                       <Image
-                        src="/assets/wagagai-signature.jpg"
+                        src="/assets/wagagai-signature-new.png"
                         alt="Certified Assayer Signature"
                         width={600}
                         height={200}
